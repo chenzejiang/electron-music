@@ -191,7 +191,7 @@ class Home extends Component {
           </div>
           <div className={styles.inputBox}>
             <span>机器码：</span>
-            <input readOnly="readOnly" value={machineId} type="text" />
+            <input className={styles.inputMachineCode} readOnly="readOnly" value={machineId} type="text" />
           </div>
           <div className={styles.inputBox}>
             <span>注册码：</span>

@@ -120,6 +120,10 @@ button.success{
   display: flex;
   padding: 0 40px;
 }
+.container .footer .inputBox .inputMachineCode{
+  /* background: #f0f0f0; */
+  background: #9c9c9c;
+}
 .container .footer input {
   border: 1px solid #9c9c9c;
   height:40px;

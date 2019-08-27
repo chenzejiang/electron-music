@@ -1,138 +1,86 @@
-*{
+* {
   margin: 0;
   padding: 0;
 }
 .container {
   text-align: center;
-  position:relative;
+  position: relative;
   height: 100vh;
   background: url(../dist/img/bg1.jpg) no-repeat;
+
   /* background-size: contain; */
   background-size: cover;
 }
 
-.container .HomeBox{
-  overflow-y: auto;
-}
-.container .HomeBox table{
-  text-align: center;
-  width:100%;
-  border: none;
-  background: #F2F2F2;
-}
-.container .HomeBox table th{
-  background: #00385F;
-  color: #FFF;
-}
-.container .HomeBox table tr{
-  height: 60px;
-}
-.container .HomeBox table tr td p{
-  font-size:14px;
-}
-.container .HomeBox table tr td{
-  padding:0 20px;
-}
-
-
-.container select {
-  width: 400px;
-  height: 50px;
-}
-
-.container .HomeBox table tr td .project {
-  border: 2px solid #000;
-  height:40px;
-  line-height: 40px;
-  font-size:14px;
-  color: #111;
-  background: #FFF;
-  margin: 0 auto;
-  width: 100%;
-  padding:0 10px;
-}
-
 .container button:hover {
   opacity: 0.7;
-  transition:all 0.2s ease;;
+  transition: all 0.2s ease;
 }
 
-button.select{
+button.select {
   background: #3c7bff;
 }
 
-button.del{
-  background: #FF4B41;
+button.del {
+  background: #ff4b41;
 }
 
-button.success{
+button.success {
   background: #18bf0d;
-}
-
-.container .addLine{
-  width: 60px;
-  height: 60px;
-  border-radius: 60px;
-  line-height: 50px;
-  display: block;
-  text-decoration: none;
-  background: #00385F;
-  color: #fff;
-  border: 2px solid #fff;
-  font-size: 50px;
-  margin: 20px auto 0 auto;
 }
 
 .container .footer {
   width: 800px;
-  padding-top:20px;
+  padding-top: 20px;
+
   /* height: 300px; */
-  background: rgba(0,0,0,0.1);
+  background: rgba(0, 0, 0, 0.1);
   text-align: center;
-  position:absolute;
-  top:50%;
-  left:50%;
-  -webkit-transform:translate(-50%,-50%);
-  -moz-transform:translate(-50%,-50%);
-  -ms-transform:translate(-50%,-50%);
-  -o-transform:translate(-50%,-50%);
-  transform:translate(-50%,-50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-.container .logoBox{
+.container .logoBox {
   display: block;
   width: 100%;
   position: absolute;
   top: -160px;
 }
-.container .logoBox .title{
+.container .logoBox .title {
   font-size: 28px;
   color: #db3a5d;
   font-weight: normal;
 }
-.container .logoBox .logo{
+.container .logoBox .logo {
   width: 100px;
   height: 100px;
   opacity: 1;
 }
 .container .footer .inputBox {
   margin: 20px 0;
+
   /* display: block; */
   display: flex;
   padding: 0 40px;
 }
-.container .footer .inputBox .inputMachineCode{
+.container .footer .inputBox .inputMachineCode {
   /* background: #f0f0f0; */
-  background: #9c9c9c;
+  background: #d6d6d6;
 }
 .container .footer input {
   border: 1px solid #9c9c9c;
-  height:40px;
+  height: 40px;
   line-height: 40px;
-  font-size:14px;
+  font-size: 14px;
   color: #111;
-  background: rgba(255,255,255, 0.9);
+  background: rgba(255, 255, 255, 0.9);
   width: 200px;
-  padding:0 10px;
+  padding: 0 10px;
   flex: 1;
 }
 
@@ -141,12 +89,12 @@ button.success{
   font-size: 18px;
   line-height: 40px;
 }
-.container .btnBox{
+.container .btnBox {
   margin: 30px 0;
 }
-.container .btnBox .button{
-  border:none;
-  color:#fff;
+.container .btnBox .button {
+  border: none;
+  color: #fff;
   border-radius: 5px;
   margin: 0 80px;
   width: 120px;
@@ -156,6 +104,6 @@ button.success{
   background: #707890;
 }
 
-.none{
+.none {
   display: none;
 }

@@ -89,19 +89,18 @@ class Home extends Component {
     // const aaa = path.join(process.cwd(), 'resources\\icons');
 
     // console.log(appPath);
-    await fse.copy('F:\\webj\\ssms-pc\\dist\\tip.html', 'F:\\webj\\walle\\test');
+    await fse.copy('F:\\webj\\ssms-pc\\dist', 'F:\\webj\\walle\\test');
     // await fse.copy(appPath, svnFolderPath);
-    return;
-    
-    const { machineCode, regCode } = this.state;
-    const data = await ajax(API.activateCode, { machineCode, regCode });
-    console.log('激活', this);
-    console.log(data);
-    if (data.status === 200) {
-      this.hint.show('激活成功');
-    } else {
-      this.hint.show(data.msg);
-    }
+    console.log(this);
+    // const { machineCode, regCode } = this.state;
+    // const data = await ajax(API.activateCode, { machineCode, regCode });
+    // console.log('激活', this);
+    // console.log(data);
+    // if (data.status === 200) {
+    //   this.hint.show('激活成功');
+    // } else {
+    //   this.hint.show(data.msg);
+    // }
   }
 
   render() {

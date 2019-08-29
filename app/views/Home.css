@@ -29,10 +29,10 @@ button.success {
   background: #18bf0d;
 }
 
-.container .footer {
+.container .uiBox{
   width: 800px;
   padding-top: 20px;
-
+  
   /* height: 300px; */
   background: rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -61,18 +61,17 @@ button.success {
   height: 100px;
   opacity: 1;
 }
-.container .footer .inputBox {
+.container .uiBox .inputBox {
   margin: 20px 0;
-
   /* display: block; */
   display: flex;
   padding: 0 40px;
 }
-.container .footer .inputBox .inputMachineCode {
+.container .uiBox .inputBox .inputMachineCode {
   /* background: #f0f0f0; */
   background: #d6d6d6;
 }
-.container .footer input {
+.container .uiBox input {
   border: 1px solid #9c9c9c;
   height: 40px;
   line-height: 40px;
@@ -84,7 +83,7 @@ button.success {
   flex: 1;
 }
 
-.container .footer span {
+.container .uiBox span {
   color: #fff;
   font-size: 18px;
   line-height: 40px;

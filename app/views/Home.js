@@ -5,7 +5,7 @@ import {withRouter, Link} from 'react-router-dom';
 import { screen, shell, clipboard } from 'electron';
 import { machineIdSync } from 'node-machine-id';
 import path from 'path';
-
+import os from 'os';
 import routes from '../constants/routes';
 import styles from './Home.css';
 import Hint from '../components/Hint';
@@ -19,7 +19,7 @@ class Home extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isShowReg: true,
+      isShowReg: false,
       machineCode: machineIdSync({original: true}), // 机器码
       regCode: '', // 注册码
     };
@@ -79,6 +79,41 @@ class Home extends Component {
   }
 
   /**
+   * 获取本机ip地址
+   */
+  getIPAdress() {
+    var interfaces = os.networkInterfaces();　　
+    for (var devName in interfaces) {　　　　
+      var iface = interfaces[devName];　　　　　　
+      for (var i = 0; i < iface.length; i++) {
+        var alias = iface[i];
+        if (alias.family === 'IPv4' && alias.address !== '127.0.0.1' && !alias.internal) {
+          return alias.address;
+        }
+      }
+    }
+  }
+
+  /**
+   * svn update
+   */
+  getIp() {
+    const {buildInfo} = this.state;
+    this.showHint(`正在执行SVN Update... (ง •_•)ง`, 999);
+    return new Promise((resolve, reject) => {
+      const execNow = exec('ipconfig', {cwd: buildInfo.svnPath}, (error, stdout, stderr) => {
+        if (error) {
+          this.showHint(`SVN Update 失败! (┬＿┬) !请确保 svn 在环境变量中`);
+          return;
+        }
+        this.showHint(`SVN Update 成功。 ♪(＾∀＾●)ﾉ`);
+        resolve();
+      });
+      this.setState({ execNow });
+    });
+  }
+
+  /**
    * 激活机器
    */
   async onActivateMachine() {
@@ -96,15 +131,18 @@ class Home extends Component {
 
     // await fse.copy(appPath, svnFolderPath);
     // console.log(this);
-    const { machineCode, regCode } = this.state;
-    const data = await ajax(API.activateCode, { machineCode, regCode });
-    console.log('激活', this);
-    console.log(data);
-    if (data.status === 200) {
-      this.hint.show('激活成功');
-    } else {
-      this.hint.show(data.msg);
-    }
+
+    console.log(this.getIPAdress());
+
+    // const { machineCode, regCode } = this.state;
+    // const data = await ajax(API.activateCode, { machineCode, regCode });
+    // console.log('激活', this);
+    // console.log(data);
+    // if (data.status === 200) {
+    //   this.hint.show('激活成功');
+    // } else {
+    //   this.hint.show(data.msg);
+    // }
   }
 
   /**

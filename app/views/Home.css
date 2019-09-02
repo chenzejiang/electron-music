@@ -6,7 +6,7 @@
   text-align: center;
   position: relative;
   height: 100vh;
-  background: url(../dist/img/bg1.jpg) no-repeat;
+  /* background: url(../dist/img/bg1.jpg) no-repeat; */
 
   /* background-size: contain; */
   background-size: cover;
